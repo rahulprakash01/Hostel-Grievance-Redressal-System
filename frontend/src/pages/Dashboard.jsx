@@ -26,7 +26,7 @@ function Dashboard() {
    
     const fetchUserType = async () => {
       try {
-        const response = await fetch("http://localhost:3000/userType", {
+        const response = await fetch("https://hostel-grievance-redressal-system.onrender.com/userType", {
           method: "GET",
           headers: GetAuthHeader(),
         });

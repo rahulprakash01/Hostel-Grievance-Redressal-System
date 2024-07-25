@@ -29,7 +29,7 @@ const WardenComplaints = () => {
 
   const getComplaints = async (e) => {
     try {
-      const response = await fetch("http://localhost:3000/complaints", {
+      const response = await fetch("https://hostel-grievance-redressal-system.onrender.com/complaints", {
         method: "GET",
         headers: GetAuthHeader()
       });
@@ -44,7 +44,7 @@ const WardenComplaints = () => {
   const handleApproval = async (id) => {
     
     try {
-      const response = await fetch(`http://localhost:3000/complaints/${id}`, {
+      const response = await fetch(`https://hostel-grievance-redressal-system.onrender.com/complaints/${id}`, {
         method: "POST",
         headers: GetAuthHeader(),
       });
@@ -63,7 +63,7 @@ const WardenComplaints = () => {
 
   const deleteComplaint = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/complaints/${id}`, {
+      const response = await fetch(`https://hostel-grievance-redressal-system.onrender.com/complaints/${id}`, {
         method: 'DELETE',
         headers: GetAuthHeader(),
       });

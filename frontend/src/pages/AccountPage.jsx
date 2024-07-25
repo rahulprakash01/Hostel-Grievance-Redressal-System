@@ -19,7 +19,7 @@ function AccountPage() {
    
     const fetchUserType = async () => {
       try {
-        const response = await fetch("http://localhost:3000/userType", {
+        const response = await fetch("https://hostel-grievance-redressal-system.onrender.com/userType", {
           method: "GET",
           headers: GetAuthHeader(),
         });
@@ -41,7 +41,7 @@ function AccountPage() {
 
   const getuserDetails = async (user_id) => {
     try {
-      const response = await fetch(`http://localhost:3000/userDetails/${user_id}`, {
+      const response = await fetch(`https://hostel-grievance-redressal-system.onrender.com/userDetails/${user_id}`, {
         method: "GET",
         headers: GetAuthHeader(),
       });

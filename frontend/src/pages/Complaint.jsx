@@ -51,7 +51,7 @@ const ComplaintForm = () => {
       const headers = GetAuthHeader();
       console.log("headers", headers);
       const body = { name, description, room };
-      const response = await fetch("http://localhost:3000/complaints", {
+      const response = await fetch("https://hostel-grievance-redressal-system.onrender.com/complaints", {
         method: "POST",
         headers: headers,
         body: JSON.stringify(body),
@@ -172,7 +172,7 @@ const ComplaintsPage = () => {
 
   const getComplaints = async (e) => {
     try {
-      const response = await fetch("http://localhost:3000/complaints", {
+      const response = await fetch("https://hostel-grievance-redressal-system.onrender.com/complaints", {
         method: "GET",
         headers: GetAuthHeader(),
       });
@@ -187,7 +187,7 @@ const ComplaintsPage = () => {
   const handleApproval = async (complaint_id) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/complaints/${complaint_id}`,
+        `https://hostel-grievance-redressal-system.onrender.com/complaints/${complaint_id}`,
         {
           method: "GET",
           headers: GetAuthHeader(),
