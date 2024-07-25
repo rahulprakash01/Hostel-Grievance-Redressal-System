@@ -7,7 +7,11 @@ const pool = new Pool({
   password: process.env.DATABSE_PASSWORD,
   host: process.env.DATABSE_HOST,
   port: process.env.DATABSE_PORT,
-  database: "hostel"
+  database: "hostel",
+  ssl: {
+    rejectUnauthorized: false,
+  
+}
   
 });
 
